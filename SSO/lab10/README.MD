@@ -1,0 +1,1 @@
+Program serwera i klienta przyjmuje za pierwszy argument port do nasłuchiwania, w razie nie podania go zostanie wybrany 4200.

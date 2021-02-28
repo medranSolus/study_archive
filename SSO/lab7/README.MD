@@ -1,0 +1,3 @@
+Program philo przyjmuje za pierwszy argument maksymalną ilość razy ile filozofowie będą jadł. Jeśli nie zostanie ona podana powtórzą tą czynność 15 razy.
+
+Program bank przyjmuje za pierwszy argument ilość powtórzeń operacji przez każdy wątek, a za drugi ilość wątków do wytworzenia. Jeśli nie zostaną one podane to przyjmą one wartości kolejno 6 i 4. Faktyczna ilość wątków jest 3 razy większa, gdyż tworzone są wątki każdego typu (dodające, odejmujące, transferujące pieniądze).

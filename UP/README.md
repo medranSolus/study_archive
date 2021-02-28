@@ -1,7 +1,7 @@
 # Urządzenia Peryferyjne
-University course for peripheral devices.
+University course for peripheral devices. Folder names correspond to laboratory topics.
 
-Folder names correspond to laboratory topics.
+**Lecturer:** Dr inż. Dominik Żelazny
 
 **Lab topics:**
   - Lab 1: AudioCard (using audio card).

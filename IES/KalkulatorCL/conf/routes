@@ -1,0 +1,43 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# APIs in EmployeeController
+GET     /user               controllers.UserController.findAll
+POST    /user               controllers.UserController.save(request:Request)
+GET     /user/:id           controllers.UserController.findById(id:Long)
+
+# APIs in MarkController
+GET     /mark               controllers.MarkController.findAll
+POST    /mark               controllers.MarkController.save(request:Request)
+GET     /mark/:id           controllers.MarkController.findById(id:Long)
+
+# APIs in SubjectController
+GET     /subject               controllers.SubjectController.findAll
+POST    /subject               controllers.SubjectController.save(request:Request)
+
+# Main controller
+GET     /                           controllers.HomeController.index
+GET     /register.html              controllers.HomeController.register
+GET     /calculator.html            controllers.HomeController.calculator
++nocsrf
+POST    /calculator.html            controllers.HomeController.calculatorSubmit(request:Request)
++nocsrf
+POST    /                           controllers.HomeController.loginSubmit(request:Request)
++nocsrf
+POST    /register.html              controllers.HomeController.registerSubmit(request:Request)
+
+
+# Controller for adminpanel
+GET     /login                      controllers.AdminController.loginSite
+GET     /logout                     controllers.AdminController.logout(request:Request)
++nocsrf
+POST    /login                      controllers.AdminController.login(request:Request)
+GET     /panel                      controllers.AdminController.panel(request:Request)
++nocsrf
+POST    /panelSubject               controllers.AdminController.panelSubject(request:Request)
++nocsrf
+POST    /panelUser                  controllers.AdminController.panelUser(request:Request)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

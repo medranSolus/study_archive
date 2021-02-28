@@ -1,0 +1,3 @@
+Program philo_ipc przyjmuje za pierwszy argument swój numer filozofa, a za drugi maksymalną ilość razy ile będzie jadł. Jeśli nie zostanie ona podana powtórzy tą czynność 15 razy. Komenda "make run" automatycznie uruchomi wszystkich pięciu filozofów.
+
+Program philo przyjmuje za pierwszy argument maksymalną ilość razy ile filozofowie będą jadł. Jeśli nie zostanie ona podana powtórzą tą czynność 15 razy.
