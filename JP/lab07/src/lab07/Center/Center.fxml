@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="616.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lab07.Center.Center">
+   <center>
+      <TableView fx:id="tableViewData" onMouseClicked="#tableViewDataClicked" prefHeight="170.0" prefWidth="616.0" BorderPane.alignment="CENTER">
+        <columns>
+            <TableColumn fx:id="tableColumnName" editable="false" prefWidth="134.0" resizable="false" text="Board Name" />
+          <TableColumn fx:id="tableColumnTemperature" editable="false" prefWidth="134.0" resizable="false" text="Temperature [*C]" />
+          <TableColumn fx:id="tableColumnWind" editable="false" minWidth="0.0" prefWidth="134.0" resizable="false" text="Wind [km/h]" />
+            <TableColumn fx:id="tableColumnPrecipation" editable="false" minWidth="0.0" prefWidth="134.0" resizable="false" text="Precipation [mm]" />
+            <TableColumn fx:id="tableColumnUpdate" editable="false" prefWidth="79.0" resizable="false" text="Update [s]" />
+        </columns>
+      </TableView>
+   </center>
+   <bottom>
+      <AnchorPane prefHeight="60.0" prefWidth="616.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="buttonChangeUpdate" disable="true" layoutX="397.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#buttonChangeUpdateClicked" text="Change update frequency">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonONOFF" disable="true" layoutX="240.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#buttonONOFFClicked" text="Update ON/OFF">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

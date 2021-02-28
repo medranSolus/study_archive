@@ -1,0 +1,9 @@
+﻿
+@{
+    ViewBag.Title = "ErrorData";
+}
+<!-- Wyświetla błąd w podanych danych do tabeli graczy -->
+<h1 class="text-danger">Brak imienia gracza lub gracz już znajduje się na liście!</h1>
+<h3>By się zarejestrować podaj imię gracza, które nie znajduje się już w bazie danych.</h3>
+
+@Html.ActionLink("Powrót do rejestracji", "Register", "Home", new { htmlAttributes = new { @class = "btn-block" } })

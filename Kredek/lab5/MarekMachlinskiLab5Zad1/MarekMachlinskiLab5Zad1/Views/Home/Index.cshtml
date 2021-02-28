@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<!-- Linki do innych stron -->
+<div class="jumbotron">
+    <ul class="media-list">
+        <li>@Html.ActionLink("Lista Wymiarów", "Planes", "Home")</li>
+        <li>@Html.ActionLink("Tabela graczy", "Players", "Home")</li>
+        <li>@Html.ActionLink("Dołącz do gry!", "Register", "Home")</li>
+        <li>@Html.ActionLink("Najdroższa karta na świecie", "ExpensiveCard", "Home")</li>
+        <li>@Html.ActionLink("Zwycięzca ostanich zawodów", "LastWinner", "Home")</li>
+        <li>@Html.ActionLink("O grze", "About", "Home")</li>
+    </ul>
+</div>

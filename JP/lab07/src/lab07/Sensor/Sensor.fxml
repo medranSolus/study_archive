@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="123.0" prefWidth="287.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lab07.Sensor.Sensor">
+   <children>
+      <Button fx:id="buttonChangeUpdate" layoutX="41.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#buttonChangeUpdateClicked" text="Change update frequency">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Label fx:id="labelUpdate" layoutX="14.0" layoutY="59.0" text="Update frequency: 5 [s]">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelValue" layoutX="14.0" layoutY="86.0" text="Measured value: 0.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

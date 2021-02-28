@@ -1,0 +1,143 @@
+﻿/*Zdefiniowanie zewnętrznych czcionek*/
+@font-face { 
+    font-family: Caslon; 
+    src:url(Fonts/CaslonAntique.ttf); 
+}
+@font-face {
+    font-family: Caslon-Bold;
+    src: url(Fonts/CaslonAntique-Bold.ttf);
+}
+@font-face {
+    font-family: Caslon-Italic;
+    src: url(Fonts/CaslonAntique-Italic.ttf);
+}
+/*Ustawianie pozycji zawartości strony*/
+body {
+    background-image:url(Images/background.png);
+}
+/*Ustawienie wielkości, pozycji i czcionki pola ze statystykami gry*/
+#stats {
+    font-family:Caslon;
+    font-size:larger;
+    height: 100%;
+    width: 400px;
+    float: left;
+}
+/*Ustawienie wielkości i pozycji pola z przeciwnikiem*/
+#enemy {
+    height: 100%;
+    width: 500px;
+    float: left;
+}
+/*Ustawienie wielkości zdjęcia przeciwnika*/
+#enemy-photo {
+    height:100%;
+}
+/*Ustawienie tekstu imperialnej maksymy*/
+#proverb {
+    margin-left: 10px;
+    font-family:Caslon-Italic;
+    font-size:150%;
+    margin-top: 10px;
+    text-align: left;
+    color: red;
+}
+/*Ustawienie tekstu podpisu imperialnej maksymy*/
+#proverb-sign {
+    margin-top:10px;
+    margin-right: 10px;
+    font-family: Caslon-Italic;
+    font-size: 125%;
+    text-align: right;
+    color: wheat;
+}
+/*Ustawienie wielkości i kolory stopki*/
+footer {
+    height:10%;
+    width:75%;
+    background-color:black;
+}
+/*Ustawienie wielkości i kolorów tabeli ze statystykami*/
+table {
+    margin-left:10px;
+    margin-top:10px;
+    width:380px;
+    color:goldenrod;
+    background-color:crimson;
+}
+/*Ustawienie wielkości i tła nagłówka strony*/
+header {
+    height:25%;
+    width:80%;
+    text-align:center;
+    background-image:url(Images/banner.png);
+    background-size:25%;
+    background-repeat:no-repeat;
+    background-position-x:center;
+    background-position-y:top;
+}
+/*Ustawienie wielkości sekcji*/
+section {
+    height:600px;
+    width:900px;
+}
+/*Ustawienie wielkości i czcionki pola z przyciskami ulepszeń*/
+nav {
+    height: 50px;
+    width: 1550px;
+    font-family: Caslon-Bold;
+    font-size: 180%;
+    margin: 0px auto;
+}
+/*Klasa centrująca zawartość na ekranie*/
+.center {
+    margin:0px auto;
+}
+/*Ustawienie marginesów i koloru listy elementów ulepszeń*/
+ul {
+    margin: 0px auto;
+    background-color: yellowgreen;
+}
+/*Ustawienie wielkości, kursora, czcionki i pozycji elementu listy ulepszeń*/
+li {
+    display: block;
+    height: 45px;
+    cursor: pointer;
+    float: left;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-right: 10px;
+    font-size: larger;
+    background-color: inherit;
+}
+/*Zmiana koloru po najechaniu na element listy*/
+li:hover {
+    background-color:chartreuse;
+}
+/*Ustawienie czcionki głównego nagłówka*/
+h1 {
+    font-family:Caslon-Bold;
+    font-size:420%;
+    color:crimson;
+}
+/*Ustawienie czcionki podpisu nagłówka*/
+p {
+    font-family: Caslon;
+    font-size: 140%;
+    color:ghostwhite;
+    background-color:black;
+}
+/*Ustawienie pozycji, wielkości, tła i widoczności ekrenu końca gry*/
+#victory {
+    display:none;
+    margin:0px auto;
+    position: fixed;
+    color:white;
+    font-family:Caslon-Bold;
+    font-size:700%;
+    text-align:center;
+    height: 100%;
+    width: 100%;
+    background-image:url(Images/victory.jpg);
+    background-size:cover;
+}

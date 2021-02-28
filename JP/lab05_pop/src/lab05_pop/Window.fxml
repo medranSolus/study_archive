@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="205.0" prefWidth="726.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lab05_pop.Window">
+   <children>
+      <Label layoutX="31.0" layoutY="55.0" text="Line 1:">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="90.0" text="Workers:">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="125.0" text="Line 2:">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="81.0" layoutY="20.0" text="INPUT">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="72.0" layoutY="155.0" text="OUTPUT">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelToAssemble13" layoutX="456.0" layoutY="57.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelToAssemble12" layoutX="426.0" layoutY="57.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelToAssemble1" layoutX="96.0" layoutY="57.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelToAssemble4" layoutX="186.0" layoutY="57.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelToAssemble2" layoutX="126.0" layoutY="57.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelToAssemble3" layoutX="156.0" layoutY="57.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelToAssemble7" layoutX="276.0" layoutY="57.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelToAssemble5" layoutX="216.0" layoutY="57.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelToAssemble8" layoutX="306.0" layoutY="57.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelToAssemble6" layoutX="246.0" layoutY="57.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelToAssemble9" layoutX="336.0" layoutY="57.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelToAssemble11" layoutX="396.0" layoutY="57.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelToAssemble10" layoutX="366.0" layoutY="57.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelToAssemble14" layoutX="486.0" layoutY="57.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelToAssemble15" layoutX="516.0" layoutY="57.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelToAssemble16" layoutX="546.0" layoutY="57.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelToAssemble17" layoutX="576.0" layoutY="57.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelToAssemble18" layoutX="606.0" layoutY="57.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelToAssemble19" layoutX="636.0" layoutY="57.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelToAssemble20" layoutX="666.0" layoutY="57.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelAssembled1" layoutX="95.0" layoutY="127.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelAssembled3" layoutX="155.0" layoutY="127.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelAssembled13" layoutX="455.0" layoutY="127.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelAssembled17" layoutX="575.0" layoutY="127.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelAssembled11" layoutX="395.0" layoutY="127.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelAssembled16" layoutX="545.0" layoutY="127.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelAssembled6" layoutX="245.0" layoutY="127.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelAssembled2" layoutX="125.0" layoutY="127.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelAssembled4" layoutX="185.0" layoutY="127.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelAssembled5" layoutX="215.0" layoutY="127.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelAssembled19" layoutX="635.0" layoutY="127.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelAssembled15" layoutX="515.0" layoutY="127.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelAssembled7" layoutX="275.0" layoutY="127.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelAssembled12" layoutX="425.0" layoutY="127.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelAssembled10" layoutX="365.0" layoutY="127.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelAssembled8" layoutX="305.0" layoutY="127.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelAssembled9" layoutX="335.0" layoutY="127.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelAssembled14" layoutX="485.0" layoutY="127.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelAssembled20" layoutX="665.0" layoutY="127.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelAssembled18" layoutX="605.0" layoutY="127.0" text="|----|">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelWorker1" layoutX="99.0" layoutY="92.0" text="____">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelWorker3" layoutX="159.0" layoutY="92.0" text="____">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelWorker13" layoutX="459.0" layoutY="92.0" text="____">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelWorker17" layoutX="579.0" layoutY="92.0" text="____">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelWorker11" layoutX="399.0" layoutY="92.0" text="____">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelWorker16" layoutX="549.0" layoutY="92.0" text="____">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelWorker6" layoutX="249.0" layoutY="92.0" text="____">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelWorker2" layoutX="129.0" layoutY="92.0" text="____">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelWorker4" layoutX="189.0" layoutY="92.0" text="____">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelWorker5" layoutX="219.0" layoutY="92.0" text="____">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelWorker19" layoutX="639.0" layoutY="92.0" text="____">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelWorker15" layoutX="519.0" layoutY="92.0" text="____">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelWorker7" layoutX="279.0" layoutY="92.0" text="____">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelWorker12" layoutX="429.0" layoutY="92.0" text="____">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelWorker10" layoutX="369.0" layoutY="92.0" text="____">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelWorker8" layoutX="309.0" layoutY="92.0" text="____">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelWorker9" layoutX="339.0" layoutY="92.0" text="____">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelWorker14" layoutX="489.0" layoutY="92.0" text="____">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelWorker20" layoutX="669.0" layoutY="92.0" text="____">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelWorker18" layoutX="609.0" layoutY="92.0" text="____">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="92.0" layoutY="37.0" text="\\\_//">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="91.0" layoutY="140.0" text="//*\\">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Slider fx:id="sliderLine1" blockIncrement="1.0" layoutX="8.0" layoutY="73.0" max="10.0" min="1.0" prefHeight="14.0" prefWidth="80.0" rotate="180.0" value="10.0" />
+      <Slider fx:id="sliderLine2" blockIncrement="1.0" layoutX="8.0" layoutY="143.0" max="10.0" min="1.0" prefHeight="14.0" prefWidth="80.0" rotate="180.0" value="10.0" />
+      <Slider fx:id="sliderWorkers" blockIncrement="1.0" layoutX="8.0" layoutY="108.0" max="10.0" min="1.0" prefHeight="14.0" prefWidth="80.0" rotate="180.0" value="10.0" />
+      <Slider fx:id="sliderInput" blockIncrement="1.0" layoutX="71.0" layoutY="13.0" max="10.0" min="1.0" prefHeight="14.0" prefWidth="80.0" rotate="180.0" value="10.0" />
+      <Slider fx:id="sliderOutput" blockIncrement="1.0" layoutX="71.0" layoutY="178.0" max="10.0" min="1.0" prefHeight="14.0" prefWidth="80.0" rotate="180.0" value="10.0" />
+      <Label layoutX="698.0" layoutY="54.0" text="-&gt;">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="698.0" layoutY="124.0" text="&lt;-">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

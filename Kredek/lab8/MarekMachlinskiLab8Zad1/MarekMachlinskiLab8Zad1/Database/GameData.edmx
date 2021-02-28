@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DB_9B1FC5_cpc20181Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="MarekMachlinskiPlayers">
+          <Key>
+            <PropertyRef Name="Login" />
+          </Key>
+          <Property Name="Login" Type="nvarchar" MaxLength="51" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="51" Nullable="false" />
+          <Property Name="CreationDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MarekMachlinskiSavedGames">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PlayerLogin" Type="nvarchar" MaxLength="51" Nullable="false" />
+          <Property Name="LastSaveDate" Type="datetime" Nullable="false" />
+          <Property Name="PointsLeft" Type="int" Nullable="false" />
+          <Property Name="AssemblerLevel" Type="int" Nullable="false" />
+          <Property Name="VisualBasicLevel" Type="int" Nullable="false" />
+          <Property Name="CLevel" Type="int" Nullable="false" />
+          <Property Name="CppLevel" Type="int" Nullable="false" />
+          <Property Name="CSharpLevel" Type="int" Nullable="false" />
+          <Property Name="FSharpLevel" Type="int" Nullable="false" />
+          <Property Name="JavaLevel" Type="int" Nullable="false" />
+          <Property Name="JavaScriptLevel" Type="int" Nullable="false" />
+          <Property Name="PHPLevel" Type="int" Nullable="false" />
+          <Property Name="PythonLevel" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_MarekMachlinskiSavedGames_MarekMachlinskiPlayers">
+          <End Role="MarekMachlinskiPlayers" Type="Self.MarekMachlinskiPlayers" Multiplicity="1" />
+          <End Role="MarekMachlinskiSavedGames" Type="Self.MarekMachlinskiSavedGames" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MarekMachlinskiPlayers">
+              <PropertyRef Name="Login" />
+            </Principal>
+            <Dependent Role="MarekMachlinskiSavedGames">
+              <PropertyRef Name="PlayerLogin" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DB_9B1FC5_cpc20181ModelStoreContainer">
+          <EntitySet Name="MarekMachlinskiPlayers" EntityType="Self.MarekMachlinskiPlayers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MarekMachlinskiSavedGames" EntityType="Self.MarekMachlinskiSavedGames" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_MarekMachlinskiSavedGames_MarekMachlinskiPlayers" Association="Self.FK_MarekMachlinskiSavedGames_MarekMachlinskiPlayers">
+            <End Role="MarekMachlinskiPlayers" EntitySet="MarekMachlinskiPlayers" />
+            <End Role="MarekMachlinskiSavedGames" EntitySet="MarekMachlinskiSavedGames" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_9B1FC5_cpc20181Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="MarekMachlinskiPlayer">
+          <Key>
+            <PropertyRef Name="Login" />
+          </Key>
+          <Property Name="Login" Type="String" MaxLength="51" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="51" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="MarekMachlinskiSavedGames" Relationship="Self.FK_MarekMachlinskiSavedGames_MarekMachlinskiPlayers" FromRole="MarekMachlinskiPlayers" ToRole="MarekMachlinskiSavedGames" />
+        </EntityType>
+        <EntityType Name="MarekMachlinskiSavedGame">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PlayerLogin" Type="String" MaxLength="51" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastSaveDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PointsLeft" Type="Int32" Nullable="false" />
+          <Property Name="AssemblerLevel" Type="Int32" Nullable="false" />
+          <Property Name="VisualBasicLevel" Type="Int32" Nullable="false" />
+          <Property Name="CLevel" Type="Int32" Nullable="false" />
+          <Property Name="CppLevel" Type="Int32" Nullable="false" />
+          <Property Name="CSharpLevel" Type="Int32" Nullable="false" />
+          <Property Name="FSharpLevel" Type="Int32" Nullable="false" />
+          <Property Name="JavaLevel" Type="Int32" Nullable="false" />
+          <Property Name="JavaScriptLevel" Type="Int32" Nullable="false" />
+          <Property Name="PHPLevel" Type="Int32" Nullable="false" />
+          <Property Name="PythonLevel" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="MarekMachlinskiPlayer" Relationship="Self.FK_MarekMachlinskiSavedGames_MarekMachlinskiPlayers" FromRole="MarekMachlinskiSavedGames" ToRole="MarekMachlinskiPlayers" />
+        </EntityType>
+        <Association Name="FK_MarekMachlinskiSavedGames_MarekMachlinskiPlayers">
+          <End Role="MarekMachlinskiPlayers" Type="Self.MarekMachlinskiPlayer" Multiplicity="1" />
+          <End Role="MarekMachlinskiSavedGames" Type="Self.MarekMachlinskiSavedGame" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MarekMachlinskiPlayers">
+              <PropertyRef Name="Login" />
+            </Principal>
+            <Dependent Role="MarekMachlinskiSavedGames">
+              <PropertyRef Name="PlayerLogin" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DB_9B1FC5_cpc20181Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="MarekMachlinskiPlayers" EntityType="Self.MarekMachlinskiPlayer" />
+          <EntitySet Name="MarekMachlinskiSavedGames" EntityType="Self.MarekMachlinskiSavedGame" />
+          <AssociationSet Name="FK_MarekMachlinskiSavedGames_MarekMachlinskiPlayers" Association="Self.FK_MarekMachlinskiSavedGames_MarekMachlinskiPlayers">
+            <End Role="MarekMachlinskiPlayers" EntitySet="MarekMachlinskiPlayers" />
+            <End Role="MarekMachlinskiSavedGames" EntitySet="MarekMachlinskiSavedGames" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_9B1FC5_cpc20181ModelStoreContainer" CdmEntityContainer="DB_9B1FC5_cpc20181Entities">
+          <EntitySetMapping Name="MarekMachlinskiPlayers">
+            <EntityTypeMapping TypeName="DB_9B1FC5_cpc20181Model.MarekMachlinskiPlayer">
+              <MappingFragment StoreEntitySet="MarekMachlinskiPlayers">
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MarekMachlinskiSavedGames">
+            <EntityTypeMapping TypeName="DB_9B1FC5_cpc20181Model.MarekMachlinskiSavedGame">
+              <MappingFragment StoreEntitySet="MarekMachlinskiSavedGames">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="PlayerLogin" ColumnName="PlayerLogin" />
+                <ScalarProperty Name="LastSaveDate" ColumnName="LastSaveDate" />
+                <ScalarProperty Name="PointsLeft" ColumnName="PointsLeft" />
+                <ScalarProperty Name="AssemblerLevel" ColumnName="AssemblerLevel" />
+                <ScalarProperty Name="VisualBasicLevel" ColumnName="VisualBasicLevel" />
+                <ScalarProperty Name="CLevel" ColumnName="CLevel" />
+                <ScalarProperty Name="CppLevel" ColumnName="CppLevel" />
+                <ScalarProperty Name="CSharpLevel" ColumnName="CSharpLevel" />
+                <ScalarProperty Name="FSharpLevel" ColumnName="FSharpLevel" />
+                <ScalarProperty Name="JavaLevel" ColumnName="JavaLevel" />
+                <ScalarProperty Name="JavaScriptLevel" ColumnName="JavaScriptLevel" />
+                <ScalarProperty Name="PHPLevel" ColumnName="PHPLevel" />
+                <ScalarProperty Name="PythonLevel" ColumnName="PythonLevel" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

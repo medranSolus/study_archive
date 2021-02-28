@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lab04_pop.Window">
+   <children>
+      <BorderPane fx:id="borderPaneLogonScreen" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <bottom>
+            <BorderPane prefHeight="70.0" prefWidth="1024.0" BorderPane.alignment="CENTER">
+               <center>
+                  <AnchorPane prefHeight="70.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="buttonRegister" layoutX="14.0" layoutY="7.0" mnemonicParsing="false" onMouseClicked="#buttonRegisterClicked" text="Register">
+                           <font>
+                              <Font name="System Bold" size="28.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="buttonDeleteUser" disable="true" layoutX="177.0" layoutY="7.0" mnemonicParsing="false" onMouseClicked="#buttonDeleteUserClicked" text="Delete user">
+                           <font>
+                              <Font name="System Bold" size="28.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="buttonLogIn" disable="true" layoutX="376.0" layoutY="7.0" mnemonicParsing="false" onMouseClicked="#buttonLogInClicked" text="Log in">
+                           <font>
+                              <Font name="System Bold" size="28.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="labelSelectedUser" layoutX="513.0" layoutY="15.0">
+                           <font>
+                              <Font name="System Italic" size="28.0" />
+                           </font>
+                           <graphic>
+                              <Label text="Selected user:">
+                                 <font>
+                                    <Font size="28.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets right="10.0" />
+                                 </padding>
+                              </Label>
+                           </graphic>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </bottom>
+         <right>
+            <TableView fx:id="tableViewUserList" onMouseClicked="#tableViewUserListsClicked" BorderPane.alignment="CENTER">
+              <placeholder>
+              	<Label text="No user data, create new user." />
+              </placeholder>
+              <columns>
+                <TableColumn fx:id="tableColumnName" editable="false" prefWidth="387.0" resizable="false" text="User Name" />
+                <TableColumn fx:id="tableColumnCompletedTests" editable="false" prefWidth="323.0" resizable="false" text="Completed Tests" />
+                  <TableColumn fx:id="tableColumnScore" editable="false" prefWidth="313.0" resizable="false" text="Overall Score [%]" />
+              </columns>
+            </TableView>
+         </right>
+      </BorderPane>
+      <BorderPane fx:id="borderPaneNormalScreen" disable="true" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <TabPane prefHeight="768.0" prefWidth="1024.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                  <Tab text="Statistics">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tableViewTestStatistics" layoutX="-6.0" layoutY="-4.0" prefHeight="271.0" prefWidth="548.0" AnchorPane.bottomAnchor="339.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="512.0" AnchorPane.topAnchor="0.0">
+                                <placeholder>
+                                	<Label text="No user statistics." />
+                                </placeholder>
+                                <columns>
+                                  <TableColumn fx:id="tableColumnTestName" editable="false" prefWidth="282.0" resizable="false" text="Test Name" />
+                                  <TableColumn fx:id="tableColumnCategory" editable="false" prefWidth="140.0" resizable="false" text="Category" />
+                                    <TableColumn fx:id="tableColumnPoints" editable="false" prefWidth="89.0" resizable="false" text="Points" />
+                                </columns>
+                              </TableView>
+                              <TableView fx:id="tableViewAverageTestScore" layoutX="2.0" layoutY="394.0" prefHeight="229.0" prefWidth="512.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="512.0" AnchorPane.topAnchor="400.0">
+                                <placeholder>
+                                	<Label text="No user statistics." />
+                                </placeholder>
+                                <columns>
+                                  <TableColumn fx:id="tableColumnAverageTestName" editable="false" prefWidth="343.0" resizable="false" text="Test Name" />
+                                  <TableColumn fx:id="tableColumnAverageScore" editable="false" prefWidth="168.0" resizable="false" text="Average Score" />
+                                </columns>
+                              </TableView>
+                              <TableView fx:id="tableViewAverageGroupScore" layoutX="513.0" layoutY="394.0" prefHeight="230.0" prefWidth="509.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="512.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="400.0">
+                                <placeholder>
+                                	<Label text="No user statistics." />
+                                </placeholder>
+                                <columns>
+                                  <TableColumn fx:id="tableColumnAverageCategory" editable="false" prefWidth="345.0" resizable="false" text="Category" />
+                                  <TableColumn fx:id="tableColumnGroupScore" editable="false" prefWidth="166.0" resizable="false" text="Average Score" />
+                                </columns>
+                              </TableView>
+                              <Label fx:id="labelUserName" layoutX="652.0" layoutY="128.0" text="User_Name">
+                                 <font>
+                                    <Font name="System Bold" size="42.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="buttonChangeUser" layoutX="907.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#buttonChangeUserClicked" text="Change user">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="buttonChangeUserName" layoutX="768.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#buttonChangeUserNameClicked" text="Change name">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                <Tab text="Test Mode">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane fx:id="anchorPaneTestMode" disable="true" layoutX="57.0" layoutY="189.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label fx:id="labelQuestion" alignment="CENTER" contentDisplay="CENTER" text="LabelQuestion" textAlignment="CENTER" textOverrun="CLIP" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+                                       <font>
+                                          <Font name="Cambria Bold" size="36.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="button1" layoutX="14.0" layoutY="188.0" mnemonicParsing="false" onMouseClicked="#button1Clicked" prefHeight="90.0" prefWidth="998.0" text="Button1" AnchorPane.bottomAnchor="461.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+                                    <Button fx:id="button2" mnemonicParsing="false" onMouseClicked="#button2Clicked" prefHeight="90.0" text="Button2" AnchorPane.bottomAnchor="330.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+                                    <Button fx:id="button3" mnemonicParsing="false" onMouseClicked="#button3Clicked" prefHeight="90.0" text="Button3" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+                                    <Button fx:id="button4" mnemonicParsing="false" onMouseClicked="#button4Clicked" prefHeight="90.0" text="Button4" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="anchorPaneTestSelect" layoutX="57.0" layoutY="55.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <TableView fx:id="tableViewTestList" layoutX="164.0" layoutY="145.0" onMouseClicked="#tableViewTestListClicked" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <placeholder>
+                                      	<Label text="No tests in database, create one first." />
+                                      </placeholder>
+                                      <columns>
+                                        <TableColumn fx:id="tableColumnChooseTestName" editable="false" prefWidth="675.0" resizable="false" text="Test Name" />
+                                        <TableColumn fx:id="tableColumnChooseCategory" editable="false" prefWidth="348.0" resizable="false" text="Catefory" />
+                                      </columns>
+                                    </TableView>
+                                    <BorderPane layoutX="382.0" layoutY="595.0" prefHeight="70.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                       <left>
+                                          <Label text="Select test" BorderPane.alignment="CENTER">
+                                             <BorderPane.margin>
+                                                <Insets left="30.0" />
+                                             </BorderPane.margin>
+                                             <font>
+                                                <Font name="System Bold" size="28.0" />
+                                             </font>
+                                          </Label>
+                                       </left>
+                                       <right>
+                                          <Button fx:id="buttonStartTest" disable="true" mnemonicParsing="false" onMouseClicked="#buttonStartTestClicked" text="Start test" BorderPane.alignment="CENTER">
+                                             <font>
+                                                <Font name="System Bold" size="28.0" />
+                                             </font>
+                                             <BorderPane.margin>
+                                                <Insets right="30.0" />
+                                             </BorderPane.margin>
+                                          </Button>
+                                       </right>
+                                    </BorderPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Edit Mode">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tableViewTestEditList" layoutX="136.0" layoutY="67.0" onMouseClicked="#tableViewTestEditListClicked" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="512.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="tableColumnEditTestName" editable="false" prefWidth="324.0" resizable="false" text="Test Name" />
+                                  <TableColumn fx:id="tableColumnEditCategory" editable="false" prefWidth="187.0" resizable="false" text="Category" />
+                                </columns>
+                              </TableView>
+                              <TableView fx:id="tableViewQuestionList" layoutX="512.0" layoutY="20.0" onMouseClicked="#tableViewQuestionListClicked" prefHeight="390.0" prefWidth="512.0" AnchorPane.leftAnchor="512.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                    <TableColumn fx:id="tableColumnQuestionID" editable="false" prefWidth="75.0" resizable="false" text="ID" />
+                                  <TableColumn fx:id="tableColumnQuestionName" editable="false" prefWidth="436.0" resizable="false" text="Questions" />
+                                </columns>
+                              </TableView>
+                              <TableView fx:id="tableViewAnswersList" layoutX="512.0" layoutY="390.0" onMouseClicked="#tableViewAnswersListClicked" prefHeight="147.0" prefWidth="512.0" AnchorPane.leftAnchor="512.0" AnchorPane.rightAnchor="0.0">
+                                <columns>
+                                    <TableColumn fx:id="tableColumnAnswerID" editable="false" prefWidth="75.0" resizable="false" text="ID" />
+                                  <TableColumn fx:id="tableColumnAnswer" editable="false" prefWidth="436.0" resizable="false" text="Answers" />
+                                </columns>
+                              </TableView>
+                              <Button fx:id="buttonAddTest" layoutX="277.0" layoutY="674.0" mnemonicParsing="false" onMouseClicked="#buttonAddTestClicked" text="Create new test" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="277.0" AnchorPane.rightAnchor="517.0" AnchorPane.topAnchor="674.0">
+                                 <font>
+                                    <Font size="28.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </Button>
+                              <Button fx:id="buttonChangeTestName" disable="true" layoutX="5.0" layoutY="674.0" mnemonicParsing="false" onMouseClicked="#buttonChangeTestNameClicked" text="Change test name" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="756.0" AnchorPane.topAnchor="674.0">
+                                 <font>
+                                    <Font size="28.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="buttonAddQuestion" disable="true" layoutX="813.0" layoutY="609.0" mnemonicParsing="false" onMouseClicked="#buttonAddQuestionClicked" text="Add question" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="813.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="609.0">
+                                 <font>
+                                    <Font size="28.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="buttonChangeQuestion" disable="true" layoutX="716.0" layoutY="674.0" mnemonicParsing="false" onMouseClicked="#buttonChangeQuestionClicked" text="Change question text" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="716.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="674.0">
+                                 <font>
+                                    <Font size="28.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="buttonChangeAnswer" disable="true" layoutX="784.0" layoutY="544.0" mnemonicParsing="false" onMouseClicked="#buttonChangeAnswerClicked" text="Change answer" AnchorPane.bottomAnchor="135.0" AnchorPane.leftAnchor="788.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="544.0">
+                                 <font>
+                                    <Font size="28.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="buttonSetAnswer" disable="true" layoutX="518.0" layoutY="544.0" mnemonicParsing="false" onMouseClicked="#buttonSetAnswerClicked" text="Set correct answer">
+                                 <font>
+                                    <Font size="28.0" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="labelCorrectAnswer" layoutX="805.0" layoutY="561.0" text="Current correct answer: " visible="false">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="buttonDeleteTest" disable="true" layoutX="518.0" layoutY="674.0" mnemonicParsing="false" onMouseClicked="#buttonDeleteTestClicked" text="Delete test">
+                                 <font>
+                                    <Font size="28.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="buttonDeleteQuestion" disable="true" layoutX="518.0" layoutY="609.0" mnemonicParsing="false" onMouseClicked="#buttonDeleteQuestionClicked" text="Delete question">
+                                 <font>
+                                    <Font size="28.0" />
+                                 </font>
+                              </Button>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

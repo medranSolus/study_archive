@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lab04_pop.AddQuestionWindow">
+   <bottom>
+      <Pane prefHeight="342.0" prefWidth="386.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="textFieldQuestion" layoutX="15.0" layoutY="51.0" prefHeight="75.0" prefWidth="354.0" />
+            <Label layoutX="14.0" layoutY="14.0" text="Enter question:">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Button fx:id="buttonAddQuestion" disable="true" layoutX="312.0" layoutY="289.0" mnemonicParsing="false" onMouseClicked="#buttonAddQuestionClicked" text="Add">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonCancel" layoutX="21.0" layoutY="289.0" mnemonicParsing="false" onMouseClicked="#buttonCancelClicked" text="Cancel">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Label layoutX="15.0" layoutY="134.0" text="Answers:">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="174.0" text="1. ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="255.0" text="4. ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="228.0" text="3. ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="201.0" text="2. ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textFieldAnswer1" layoutX="40.0" layoutY="175.0" prefHeight="25.0" prefWidth="330.0" />
+            <TextField fx:id="textFieldAnswer2" layoutX="40.0" layoutY="202.0" prefHeight="25.0" prefWidth="330.0" />
+            <TextField fx:id="textFieldAnswer3" layoutX="40.0" layoutY="229.0" prefWidth="330.0" />
+            <TextField fx:id="textFieldAnswer4" layoutX="40.0" layoutY="256.0" prefWidth="330.0" />
+            <SplitMenuButton layoutX="116.0" layoutY="289.0" mnemonicParsing="false" text="Correct answer">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#menuItemClicked" text="1" />
+                <MenuItem mnemonicParsing="false" onAction="#menuItemClicked" text="2" />
+                  <MenuItem mnemonicParsing="false" onAction="#menuItemClicked" text="3" />
+                  <MenuItem mnemonicParsing="false" onAction="#menuItemClicked" text="4" />
+              </items>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </SplitMenuButton>
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>

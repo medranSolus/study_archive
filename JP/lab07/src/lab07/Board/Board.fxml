@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="107.0" prefWidth="328.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="lab07.Board.Board">
+   <children>
+      <Label fx:id="labelTemperature" layoutX="14.0" layoutY="14.0" text="Temperature: 0C (Sensor_name)">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelWind" layoutX="14.0" layoutY="39.0" text="Wind: 0 km/h (Sensor_name)">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPrecipation" layoutX="14.0" layoutY="64.0" text="Precipation: 0 mm (Sensor_name)">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

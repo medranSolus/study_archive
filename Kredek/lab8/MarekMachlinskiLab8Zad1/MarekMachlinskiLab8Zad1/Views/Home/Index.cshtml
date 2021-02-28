@@ -1,0 +1,39 @@
+﻿@model MarekMachlinskiLab8Zad1.Database.MarekMachlinskiPlayer
+@{
+    ViewBag.Title = "Language_Master";
+}
+<section id="main-section" class="text-center">
+    <!--Tytuł gry-->
+    <h2 class="font center label-warning" style="width:400px; border-radius: 0px 0px 50px 10px;">Language_Master</h2>
+    <!--Formularz umożliwiający zalogowanie się do gry-->
+    @using (Html.BeginForm("Menu", "Home", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+    <div class="form-horizontal center" style="width:400px;">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Login, htmlAttributes: new { @class = "control-label col-md-2 font", @style = "color: whitesmoke;" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Login, new { htmlAttributes = new { @class = "form-control font" } })
+                @Html.ValidationMessageFor(model => model.Login, "", new { @class = "text-danger font" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2 font", @style = "color: whitesmoke;" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control font", @type = "password" } })
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger font" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-1 col-md-10">
+                <!--Przycisk przejścia do strony rejestracji-->
+                @Html.ActionLink("Register", "Register", "Home", new { @class = "btn btn-danger font" })
+                <input type="submit" value="Login" class="btn btn-primary font" />
+            </div>
+        </div>
+    </div>
+    }
+</section>

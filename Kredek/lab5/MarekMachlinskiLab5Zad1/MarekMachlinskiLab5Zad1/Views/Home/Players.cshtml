@@ -1,0 +1,37 @@
+﻿@model IEnumerable<MarekMachlinskiLab5Zad1.Database.Players>
+
+@{
+    ViewBag.Title = "Players";
+}
+
+<h2>Gracze</h2>
+<!-- Tabela ze znanymi graczami pobrana z bazy danych -->
+<table class="table">
+    <tr style="background-color:black; color:aliceblue">
+        <th>
+            Imię
+        </th>
+        <th>
+            Data dołączenia
+        </th>
+        <th>
+            Tytuł
+        </th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @item.Name
+        </td>
+        <td>
+            @item.EnlistDate.ToShortDateString()
+        </td>
+        <td>
+            @item.Title
+        </td>
+    </tr>
+}
+
+</table>

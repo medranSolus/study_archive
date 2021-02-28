@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.852
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioCard", "AudioCard\AudioCard.csproj", "{8CD5289A-16F9-48DE-BDFA-64743ECB730D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8CD5289A-16F9-48DE-BDFA-64743ECB730D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CD5289A-16F9-48DE-BDFA-64743ECB730D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CD5289A-16F9-48DE-BDFA-64743ECB730D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CD5289A-16F9-48DE-BDFA-64743ECB730D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {693C93DA-5D31-440B-9679-0028ADFAD5FC}
+	EndGlobalSection
+EndGlobal

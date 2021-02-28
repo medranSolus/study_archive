@@ -1,0 +1,65 @@
+﻿/*Ustawienie pozycji całego dokumentu*/
+html {
+    display: table;
+    margin: auto;
+}
+/*Ustawianie pozycji zawartości strony*/
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+/*Ustawienie nagłówka strony*/
+header
+{
+    height: 200px;
+    width: 1200px;
+    background-color: darksalmon;
+    text-align: center;
+}
+/*Ustawienie wysokości dla obrazka nagłówka*/
+header img {
+    height: 180px;
+}
+/*Ustawienie elementu nawigacyjnego*/
+nav {
+    height: 100px;
+    width: 600px;
+    background-color: aliceblue;
+}
+/*Ustawienie elementów informacyjnych*/
+section {
+    height: 600px;
+    width: 800px;
+    background-color: Highlight;
+    color: wheat;
+}
+/*Ustawienie obrazków sekcji informacyjnej*/
+section img {
+    height: 90%;
+    width: 95%;
+    margin: 10px 2.5% 10px 2.5%;
+}
+/*Ustawienia stopki*/
+footer {
+    height: 50px;
+    width: 1000px;
+    background-color: peru;
+}
+/*Ustawienie koloru tła*/
+.main-background {
+    background-color: cornflowerblue;
+}
+/*Ustawienie pozycji text-information*/
+#text-information {
+    width: 50%;
+    height: 30%;
+    float: left;
+    background-color: white;
+}
+/*Ustawienie pozycji photo-information*/
+#photo-information {
+    width: 50%;
+    height: 30%;
+    float: left;
+    background-color: darkgoldenrod;
+}

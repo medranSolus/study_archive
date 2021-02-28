@@ -1,0 +1,158 @@
+﻿@model MarekMachlinskiLab8Zad1.Models.SaveGameModel
+@{
+    ViewBag.Title = "Language_Master";
+}
+<section id="game-section">
+    <!--Pierwsza część listy języków do ulepszenia wraz z ich aktualnym poziomem-->
+    <nav>
+        <div class="img-section">
+            <img src="~/Content/Images/assembler.png" onclick="upgrade('assembler')" alt="assembler" />
+            <p id="assembler-level">Lvl: @Model.AssemblerLevel</p>
+        </div>
+        <div class="img-section">
+            <img src="~/Content/Images/c.png" onclick="upgrade('c')" alt="c" />
+            <p id="c-level">Lvl: @Model.CLevel</p>
+        </div>
+        <div class="img-section">
+            <img src="~/Content/Images/cpp.png" onclick="upgrade('cpp')" alt="cpp" />
+            <p id="cpp-level">Lvl: @Model.CppLevel</p>
+        </div>
+        <div class="img-section">
+            <img src="~/Content/Images/csharp.png" onclick="upgrade('csharp')" alt="csharp" />
+            <p id="csharp-level">Lvl: @Model.CSharpLevel</p>
+        </div>
+        <div class="img-section">
+            <img src="~/Content/Images/fsharp.png" onclick="upgrade('fsharp')" alt="fsharp" />
+            <p id="fsharp-level">Lvl: @Model.FSharpLevel</p>
+        </div>
+    </nav>
+    <!--Link wyjścia z aktualnej gry, po kliknięciu następuje wysłanie obecnego stanu do bazy danych-->
+    @Html.ActionLink("Save", "Delete", "Home", new { id = 0, login = Model.PlayerLogin }, new { @class = "btn btn-danger font", @onclick = "save()" })
+    <!--Obecna liczba punktów dostępnych do wydania na ulepszenia języków-->
+    <p id="points-left">Points: @Model.PointsLeft</p>
+    <!--Opis celu gry-->
+    <header class="font" style="color: darkcyan; position: fixed; top: 400px; left: 300px; margin: 0 auto; font-size:400%; width:1300px">Złap jak najwięcej programistów i ulepsz kolejne obszary branży developerskiej!</header>
+    <!--Druga część listy języków do ulepszenia wraz z ich aktualnym poziomem-->
+    <footer style="margin-top: 576px; position: fixed; width: 80%;">
+        <div class="img-section">
+            <p id="java-level">Lvl: @Model.JavaLevel</p>
+            <img src="~/Content/Images/java.png" onclick="upgrade('java')" alt="java" />
+        </div>
+        <div class="img-section">
+            <p id="javaScript-level">Lvl: @Model.JavaScriptLevel</p>
+            <img src="~/Content/Images/javaScript.png" onclick="upgrade('javaScript')" alt="javaScript" />
+        </div>
+        <div class="img-section">
+            <p id="php-level">Lvl: @Model.PHPLevel</p>
+            <img src="~/Content/Images/php.png" onclick="upgrade('php')" alt="php" />
+        </div>
+        <div class="img-section">
+            <p id="python-level">Lvl: @Model.PythonLevel</p>
+            <img src="~/Content/Images/python.png" onclick="upgrade('python')" alt="python" />
+        </div>
+        <div class="img-section">
+            <p id="visualBasic-level">Lvl: @Model.VisualBasicLevel</p>
+            <img src="~/Content/Images/visualBasic.png" onclick="upgrade('visualBasic')" alt="visualBasic" />
+        </div>
+    </footer>
+</section>
+<!--Część skryptów musiała zostać umieszczona tej sekcji z racji użycia zmiennych przesłanych przez model-->
+<script type="text/javascript" src="~/Scripts/script.js">
+    //Możliwe punkty do wydania na ulepszenia
+    var points = @Model.PointsLeft;
+    //Aktualne poziomy języków
+    var assemblerLevel = @Model.AssemblerLevel;
+    var cLevel = @Model.CLevel;
+    var cppLevel = @Model.CppLevel;
+    var cSharpLevel = @Model.CSharpLevel;
+    var fSharpLevel = @Model.FSharpLevel;
+    var javaLevel = @Model.JavaLevel;
+    var javaScriptLevel = @Model.JavaScriptLevel;
+    var phpLevel = @Model.PHPLevel;
+    var pythonLevel = @Model.PythonLevel;
+    var visualBasicLevel = @Model.VisualBasicLevel;
+
+    //Po kliknięciu na ikonę danego języka zwiększa jego poziom jeśli są dostępne punkty
+    function upgrade(language) {
+        if (points > 0) {
+            switch (language) {
+                case "assembler":
+                    ++assemblerLevel;
+                    document.getElementById("assembler-level").innerHTML = "Lvl: " + assemblerLevel;
+                    break;
+                case "c":
+                    ++cLevel;
+                    document.getElementById("c-level").innerHTML = "Lvl: " + cLevel;
+                    break;
+                case "cpp":
+                    ++cppLevel;
+                    document.getElementById("cpp-level").innerHTML = "Lvl: " + cppLevel;
+                    break;
+                case "csharp":
+                    ++cSharpLevel;
+                    document.getElementById("csharp-level").innerHTML = "Lvl: " + cSharpLevel;
+                    break;
+                case "fsharp":
+                    ++fSharpLevel;
+                    document.getElementById("fsharp-level").innerHTML = "Lvl: " + fSharpLevel;
+                    break;
+                case "java":
+                    ++javaLevel;
+                    document.getElementById("java-level").innerHTML = "Lvl: " + javaLevel;
+                    break;
+                case "javaScript":
+                    ++javaScriptLevel;
+                    document.getElementById("javaScript-level").innerHTML = "Lvl: " + javaScriptLevel;
+                    break;
+                case "php":
+                    ++phpLevel;
+                    document.getElementById("php-level").innerHTML = "Lvl: " + phpLevel;
+                    break;
+                case "python":
+                    ++pythonLevel;
+                    document.getElementById("python-level").innerHTML = "Lvl: " + pythonLevel;
+                    break;
+                case "visualBasic":
+                    ++visualBasicLevel;
+                    document.getElementById("visualBasic-level").innerHTML = "Lvl: " + visualBasicLevel;
+                    break;
+            }
+            --points;
+            document.getElementById("points-left").innerHTML = "Points: " + points;
+        }
+    }
+
+    //Po kliknięciu na przycisk Save wysyła obecny stan gry do bazy danych
+    function save() {
+        var model = {
+            ID: @Model.ID,
+            PlayerLogin: "@Model.PlayerLogin",
+            PointsLeft: points,
+            AssemblerLevel: assemblerLevel,
+            VisualBasicLevel: visualBasicLevel,
+            CLevel: cLevel,
+            CppLevel: cppLevel,
+            CSharpLevel: cSharpLevel,
+            FSharpLevel: fSharpLevel,
+            JavaLevel: javaLevel,
+            JavaScriptLevel: javaScriptLevel,
+            PHPLevel: phpLevel,
+            PythonLevel: pythonLevel
+        }
+        $.ajax({
+            url: "/Home/Save",
+            type: "POST",
+            async: false,
+            data: JSON.stringify(model),
+            contentType: "application/json"
+        });
+    }
+
+    //Po kliknięciu na programistę jest on usuwany i liczba punktów się zwiększa
+    function programmerClicked(id) {
+        var child = document.getElementById(id);
+        child.parentNode.removeChild(child);
+        ++points;
+        document.getElementById("points-left").innerHTML = "Points: " + points;
+    }
+</script>

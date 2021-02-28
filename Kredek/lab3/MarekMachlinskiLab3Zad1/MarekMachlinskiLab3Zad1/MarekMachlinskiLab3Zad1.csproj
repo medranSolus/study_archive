@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1B516D5C-86D4-4D59-B828-20825A7C8BF7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MarekMachlinskiLab3Zad1</RootNamespace>
+    <AssemblyName>MarekMachlinskiLab3Zad1</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>App.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormAddContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddContact.Designer.cs">
+      <DependentUpon>FormAddContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddEvent.Designer.cs">
+      <DependentUpon>FormAddEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddGoal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddGoal.Designer.cs">
+      <DependentUpon>FormAddGoal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddMeeting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddMeeting.Designer.cs">
+      <DependentUpon>FormAddMeeting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddTask.Designer.cs">
+      <DependentUpon>FormAddTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddWork.Designer.cs">
+      <DependentUpon>FormAddWork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAddContact.resx">
+      <DependentUpon>FormAddContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddEvent.resx">
+      <DependentUpon>FormAddEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddGoal.resx">
+      <DependentUpon>FormAddGoal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddMeeting.resx">
+      <DependentUpon>FormAddMeeting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddTask.resx">
+      <DependentUpon>FormAddTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddWork.resx">
+      <DependentUpon>FormAddWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Work.png" />
+    <None Include="Resources\UserProcesses.png" />
+    <None Include="Resources\User.png" />
+    <None Include="Resources\Process.png" />
+    <None Include="Resources\Meeting.png" />
+    <None Include="Resources\Task.png" />
+    <None Include="Resources\Contacts.png" />
+    <None Include="Resources\Goal.png" />
+    <None Include="Resources\Event.png" />
+    <None Include="Resources\Add.png" />
+    <None Include="Resources\Click.wav" />
+    <Content Include="Resources\Icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

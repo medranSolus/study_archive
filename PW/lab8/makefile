@@ -1,0 +1,15 @@
+FILES = $(patsubst %.c, bin/%, $(shell find src/ -type f -name "*.c" -exec basename {} \;))
+
+.PHONY: all
+all: mkbin $(FILES)
+
+.PHONY: mkbin
+mkbin:
+	@mkdir -p bin/
+
+bin/%: src/%.c
+	@gcc -std=c11 -I inc/ -lrt -lpthread $< -o $@
+
+.PHONY: clean
+clean:
+	@rm bin/*

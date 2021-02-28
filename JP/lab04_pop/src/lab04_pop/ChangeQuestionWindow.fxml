@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lab04_pop.ChangeQuestionWindow">
+   <center>
+      <Pane prefHeight="154.0" prefWidth="310.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="textFieldQuestion" layoutX="81.0" layoutY="63.0" />
+            <Label layoutX="33.0" layoutY="14.0" text="Enter new question:">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Button fx:id="buttonChangeName" layoutX="185.0" layoutY="101.0" mnemonicParsing="false" onMouseClicked="#buttonChangeQuestionClicked" text="Change">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonCancel" layoutX="43.0" layoutY="101.0" mnemonicParsing="false" onMouseClicked="#buttonCancelClicked" text="Cancel">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

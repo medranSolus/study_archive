@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!--Ustawienie kodowania strony-->
+    <meta charset="utf-8" />
+    <!--Dodanie pliku stylów do strony-->
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <!--Ustawienie nazwy strony-->
+    <title>Heretic Purger</title>
+</head>
+<body>
+    <!--Ekran wygranej gry-->
+    <section id="victory">VICTORY!</section>
+    <!--Ekran gry-->
+    <div id="game">
+        <!--Nagłówek strony z opisem zadania-->
+        <header class="center">
+            <h1>Purge Heretics!</h1>
+            <p>Imperial citizens! Forge World of Mezoa located in Segmentum Obscurus inside the Gothic Sector has been invaded by Abaddon the Despoiler and his foul Black Crusade. We must stand against this heretic, we must protect our cities, we must protect The Imperium of Man from this dreadful foe and purge him from existence!</p>
+        </header>
+        <!--Menu z listą możliwych ulepszeń-->
+        <nav class="center">
+            <ul>
+                <li onclick="buyGuardsman()">Enlist guardsman (10)</li>
+                <li onclick="buyInquisitor()">Call for Inquisition (100)</li>
+                <li onclick="buyMarine()">Request Marines help (500)</li>
+                <li onclick="buyKnight()">Drop Imperial Knight (1000)</li>
+                <li onclick="buyTitan()">Deliver TITAN (5000)</li>
+            </ul>
+        </nav>
+        <!--Główna sekcja gry-->
+        <section class="center">
+            <!--Tabela ze statystykami gracza-->
+            <div id="stats">
+                <table>
+                    <tr>
+                        <td>Slaughtered heretics: </td>
+                        <td id="heretics-count">0</td>
+                    </tr>
+                    <tr>
+                        <td>Imperial seals of aprooval: </td>
+                        <td id="seals-count">0</td>
+                    </tr>
+                    <tr>
+                        <td>Guardsman enlisted: </td>
+                        <td id="guards-count">0</td>
+                    </tr>
+                    <tr>
+                        <td>Inquisitors included: </td>
+                        <td id="inquisition-count">0</td>
+                    </tr>
+                    <tr>
+                        <td>Adeptus Astartes summoned: </td>
+                        <td id="marines-count">0</td>
+                    </tr>
+                    <tr>
+                        <td>Knights support provided: </td>
+                        <td id="knights-count">0</td>
+                    </tr>
+                    <tr>
+                        <td>Titans assigned to defend: </td>
+                        <td id="titans-count">0</td>
+                    </tr>
+                </table>
+            </div>
+            <!--Pole przeciwnika-->
+            <div id="enemy">
+                <!--Obraz przeciwnika-->
+                <img src="Images/abaddon.jpg" alt="abaddon" id="enemy-photo" usemap="#abaddon-click" />
+            </div>
+        </section>
+        <!--Stopka strony z imperialną maksymą-->
+        <footer class="center">
+            <h3 id="proverb">"Some may question my right to destroy world of ten billion souls. But those who truly understand realise that I have no right to let them live. No sacrifice is too great. No treachery too small."</h3>
+            <h4 id="proverb-sign"> ~ Imperial proverb of the day</h4>
+        </footer>
+    </div>
+    <!--Mapa określająca pozycję klikania, by atakować przeciwnika-->
+    <map name="abaddon-click">
+        <area shape="circle" coords="270,185,40" href="" alt="head" />
+    </map>
+    <!--Dołączenie wymaganych skryptów, w tym biblioteki jQuery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="287.0" prefWidth="448.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lab06.Courier.Courier">
+   <children>
+      <Label layoutX="14.0" layoutY="72.0" text="Server address: ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="285.0" layoutY="72.0" text="Server port: ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldHost" layoutX="125.0" layoutY="72.0" prefHeight="25.0" prefWidth="156.0" promptText="localhost" text="localhost" />
+      <TextField fx:id="textFieldPort" layoutX="372.0" layoutY="72.0" prefHeight="25.0" prefWidth="62.0" promptText="6667" text="6667" />
+      <ToggleButton fx:id="toogleButtonServer" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#toogleButtonServerClicked" prefWidth="149.0" style="-fx-background-color: CCCC00;" text="Connect">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </ToggleButton>
+      <ListView fx:id="listViewLog" layoutX="179.0" layoutY="106.0" prefHeight="124.0" prefWidth="255.0" />
+      <Button fx:id="buttonDeliver" disable="true" layoutX="14.0" layoutY="235.0" mnemonicParsing="false" onMouseClicked="#buttonDeliverClicked" text="Deliver">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Label fx:id="labelOrder" contentDisplay="CENTER" layoutX="94.0" layoutY="235.0" prefHeight="37.0" prefWidth="340.0" text="No order received" textAlignment="CENTER" textOverrun="CLIP" wrapText="true" />
+      <Button fx:id="buttonChangePort" layoutX="173.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#buttonChangePortClicked" text="Change port">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Label fx:id="labelPort" layoutX="291.0" layoutY="27.0" text="Courier port: ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="checkBoxBooks" layoutX="14.0" layoutY="106.0" mnemonicParsing="false" onMouseClicked="#checkBoxBooksClicked" selected="true" text="Books" />
+      <CheckBox fx:id="checkBoxMovies" layoutX="14.0" layoutY="123.0" mnemonicParsing="false" onMouseClicked="#checkBoxMoviesClicked" text="Movies" />
+      <CheckBox fx:id="checkBoxMusic" layoutX="14.0" layoutY="140.0" mnemonicParsing="false" onMouseClicked="#checkBoxMusicClicked" text="Music" />
+      <CheckBox fx:id="checkBoxElectronics" layoutX="14.0" layoutY="174.0" mnemonicParsing="false" onMouseClicked="#checkBoxElectronicsClicked" text="Electronics" />
+      <CheckBox fx:id="checkBoxGames" layoutX="14.0" layoutY="157.0" mnemonicParsing="false" onMouseClicked="#checkBoxGamesClicked" text="Games" />
+      <CheckBox fx:id="checkBoxAGD" layoutX="97.0" layoutY="123.0" mnemonicParsing="false" onMouseClicked="#checkBoxAGDClicked" text="AGD" />
+      <CheckBox fx:id="checkBoxComputers" layoutX="97.0" layoutY="106.0" mnemonicParsing="false" onMouseClicked="#checkBoxComputersClicked" text="Computers" />
+      <CheckBox fx:id="checkBoxRTV" layoutX="97.0" layoutY="140.0" mnemonicParsing="false" onMouseClicked="#checkBoxRTVClicked" text="RTV" />
+      <CheckBox fx:id="checkBoxFood" layoutX="97.0" layoutY="157.0" mnemonicParsing="false" onMouseClicked="#checkBoxFoodClicked" text="Food" />
+      <CheckBox fx:id="checkBoxPlants" layoutX="97.0" layoutY="174.0" mnemonicParsing="false" onMouseClicked="#checkBoxPlantsClicked" text="Plants" />
+      <ChoiceBox fx:id="choiceBoxSize" layoutX="14.0" layoutY="202.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

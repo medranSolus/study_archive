@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="203.0" prefWidth="401.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lab06.Client.Client">
+   <children>
+      <TextField fx:id="textFieldOrder" layoutX="14.0" layoutY="120.0" prefHeight="25.0" prefWidth="373.0" promptText="Enter your order" />
+      <Button fx:id="buttonSend" layoutX="331.0" layoutY="45.0" mnemonicParsing="false" onMouseClicked="#buttonSendClicked" text="Send">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Label fx:id="labelOrder" layoutX="14.0" layoutY="151.0" prefHeight="37.0" prefWidth="373.0" />
+      <TextField fx:id="textFieldPort" layoutX="333.0" layoutY="14.0" prefHeight="25.0" prefWidth="54.0" promptText="6666" text="6666" />
+      <Label layoutX="246.0" layoutY="14.0" text="Server port: ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="14.0" text="Server address: ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldHost" layoutX="131.0" layoutY="14.0" prefHeight="25.0" prefWidth="111.0" promptText="localhost" text="localhost" />
+      <Button fx:id="buttonChangePort" layoutX="14.0" layoutY="39.0" mnemonicParsing="false" onMouseClicked="#buttonChangePortClicked" text="Change port">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Label fx:id="labelPort" layoutX="129.0" layoutY="45.0" text="Listenning port: ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="choiceBoxSize" layoutX="14.0" layoutY="89.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="choiceBoxType" layoutX="174.0" layoutY="89.0" prefHeight="25.0" prefWidth="213.0" />
+   </children>
+</AnchorPane>

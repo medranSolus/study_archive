@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "ExpensiveCard";
+}
+<!-- Po kliknięcu na obrazek lotosu przenosi do strony z jego opisem -->
+<map name="lotusMap">
+    <area shape="circle" coords="220vw,140vh,30" href="http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=382866" target="_blank" alt="Lotus"/>
+</map>
+
+<h1>Najdroższa karta na świecie</h1>
+<!-- Krótkie przedstawienie najdroższej karty w grze -->
+<div class="jumbotron">
+    <h2>Black Lotus</h2>
+    <h3>Cena: $250k - $150k</h3>
+    <div class="text-center"><img src="~/Content/Images/BlackLotus.jpg" style="height:50vh;" usemap="#lotusMap"/></div>
+</div>

@@ -1,0 +1,24 @@
+{
+    "files.associations": {
+        "stdbool.h": "c",
+        "chrono": "c",
+        "algorithm": "c",
+        "type_traits": "c",
+        "stdio.h": "c",
+        "array": "c",
+        "deque": "c",
+        "list": "c",
+        "string": "c",
+        "unordered_map": "c",
+        "vector": "c",
+        "string_view": "c",
+        "initializer_list": "c",
+        "valarray": "c",
+        "stat.h": "c",
+        "types.h": "c",
+        "*.tcc": "c",
+        "fstream": "c",
+        "errno.h": "c",
+        "condition_variable": "c"
+    }
+}

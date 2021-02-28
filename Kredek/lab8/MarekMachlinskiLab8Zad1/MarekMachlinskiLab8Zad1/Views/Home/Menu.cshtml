@@ -1,0 +1,43 @@
+﻿@model IEnumerable<MarekMachlinskiLab8Zad1.Database.MarekMachlinskiSavedGame>
+@{
+    ViewBag.Title = "Menu";
+}
+<section id="menu-section" class="text-center">
+    <!--Wyświetlenie obecnego zalogowanego użytkownika-->
+    <h2 class="font center label-warning font" style="width:400px; border-radius: 0px 0px 50px 10px;">@Model.First().PlayerLogin saved games</h2>
+    <hr style="width: 70%;" />
+    <!--Tabela zawierająca obecne pliki zapisów poprzednich gier-->
+    <table class="table center" style="background-color: cyan; width: 80%; border-radius: 0px 0px 50px 10px;">
+        <tr>
+            <td>
+                Date
+            </td>
+            <td>
+                <!--Rozpoczęcie nowej gry-->
+                @Html.ActionLink("New Game", "GameScreen", "Home", new MarekMachlinskiLab8Zad1.Models.SaveGameModel() { PlayerLogin = Model.First().PlayerLogin }, new { @class = "btn btn-success font" })
+            </td>
+            <td>
+                <!--Wylogowanie obecnego użytkownika-->
+                @Html.ActionLink("Log out", "Index", "Home", null, new { @class = "btn btn-danger font" })
+            </td>
+        </tr>
+        <tr></tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <!--Daty plików zapisu-->
+                    @Html.DisplayFor(modelItem => item.LastSaveDate)
+                </td>
+                <td>
+                    <!--Przycisk wczytania pliku zapisu-->
+                    @Html.ActionLink("Load", "GameScreen", "Home", item, new { @class = "btn btn-primary font" })
+                </td>
+                <td>
+                    <!--Przycisk usunięcia pliku zapisu-->
+                    @Html.ActionLink("Delete", "Delete", "Home", new { id = item.ID, login = item.PlayerLogin }, new { @class = "btn btn-danger font" })
+                </td>
+            </tr>
+        }
+    </table>
+</section>
